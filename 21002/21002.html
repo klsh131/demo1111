@@ -1,49 +1,127 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Ex-1-1</title>
-        <style>
-        body {
-        background-color: rgb(151, 222, 222);
-        }
-        
-        h1 {
+
+<head>
+
+    <style>
+        h2 {
         color: rgb(210, 131, 160);
         margin-left: 2px;
         font-style: italic;
         font-size: 400%;
         }
-        
-        h5 {
-        color: rgb(224, 112, 112);
-        margin-left: 2px;
-        font-style: italic;
-        font-size: 100%;
+
+        body {background-image: url(https://images.rawpixel.com/image_600/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjgwMC1teW50LTExLmpwZw.jpg);
+                  background-size:cover;}
+            h1 {font-size: 300px;}
+
+        #jkpink1 {
+            background-color: #efa3a3;
+            border: 2px solid #e1819f;
+            border-radius: 9px;
+            font-size: 3px;
+            font-family: PMingLiU;
+            cursor: pointer;
         }
 
-        .buttonContainer{
-        color: rgb(228, 195, 195);
-        border: 1px solid rgb(221, 179, 179);
-        height: 32px;
-        border-radius: 16px;
+        #jkpink2 {
+            background-color: #f0e0dc;
+            border: 2px solid #e3bbc7;
+            border-radius: 9px;
+            font-size: 3px;
+            font-family: PMingLiU;
+            cursor: pointer;
         }
-        #jkpink {background-color:#e9bfb6;} 
-        </style>
-    </head>
+
+        .jacky {
+            width: 100;
+            height: 40;
+            border: 2px solid #a76c6c;
+            border-radius: 1px;
+        }
+        .eggimg{
+            width: 430px;
+            height: 430px;
+            margin-right: 10px;
+        }
+    </style>
+
+    <script>
+        function showColor(cid) {
+            if (cid == 1) {
+                document.getElementById("iphonephoto").setAttribute("src", "安妮亞.png");
+                document.getElementById("iphonecolor").innerHTML = "<font color='#e9bfb6'>" + "間諜家家酒" + "</font>";
+            }
+        }
+
+        function change() {
+            let 扭蛋1 = "安妮亞.png";
+            let 扭蛋2 = "玩具總動員.png";
+            let 扭蛋3 = "恐龍.png";
+            let 扭蛋4 = "馬桶.png";
+            let 扭蛋5 = "鯊魚.png";
+            let 扭蛋6 = "蠟筆小新.png";
+            let 扭蛋7 = "艾摩石像.png";
+            let 扭蛋8 = "冰.png";
+            let 扭蛋9 = "猩猩.png";
+            let 扭蛋10 = "皮卡丘.png";
+            
+            let fragment3 = "";
+
+                z = Math.floor(Math.random() * 10) + 1;
+                if (z == 1) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋1 + "' />";
+                }
+                else if (z == 2) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋2 + "' />";
+                }
+                else if (z == 3) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋3 + "' />";
+                }
+                else if (z == 4) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋4 + "' />";
+                }
+                else if (z == 5) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋5 + "' />";
+                }
+                else if (z == 6) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋6 + "' />";
+                }
+                else if (z == 7) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋7 + "' />";
+                }
+                else if (z == 8) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋8 + "' />";
+                }
+                else if (z == 9) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋9 + "' />";
+                }
+                else {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋10 + "' />";
+                }
+
+                fragment3 = fragment3 + "<br>";
 
 
+            console.log(fragment3);
+            document.getElementById("display-3").innerHTML = fragment3;
+        }
+    </script>
 
+</head>
 
 <body>
-    <center><h1>今天想扭什麼蛋 / Capsule Toy</h1>
-    <h5>(此為隨機&一套式扭蛋出清中! 趕快來試試手氣吧!!!)</h5> 
-    <br><img src="https://pic.huitu.com/pic/20220527/3199389_20220527225000125013_0.jpg" width="300"></br>
-            
-    <!--start & restart button-->
-    <div class="buttonContainer">
-    <br><input type="button"  onclick="location.href='https://mnya.tw';"  value="請投150元硬幣"  height=32px border-radius=16px style="background-color:rgb(228, 178, 178)" /></br>
-    </div>
+
+    <center>
+    <h2>今天想扭什麼蛋 / Capsule Toy</h2>
+    <h3 style="color:#c796a4;">此為隨機&一套式扭蛋出清中! 趕快來試試手氣吧!!!</h3>
+    <h6 style="color:#c796a4;">(說明:扭完一次200元才可點選再扭一次(監視錄影中)，點選"在投一次"只要150元!否則每次都要投200元。)</h6>
+    <div id="display-3"><img src="扭蛋.jpg" width="300"></div>
+
+    <br><input type="button" id="jkpink1" class="jacky" value="請投200元硬幣" onclick="javascript:{change();}"></input>
+    <input type="button" id="jkpink2" class="jacky" value="再扭一次" onclick="javascript:{change();}"></input></br>
+
     </center>
+
 </body>
 
 </html>
