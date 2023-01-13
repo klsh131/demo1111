@@ -1,0 +1,246 @@
+<html>
+<head>
+    <title>Small Maze</title>
+    <meta charset="utf-8">
+    <script src="maze.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="maze.css">
+</head>
+
+<body>
+  
+    <h1>Small Maze</h1>
+    <p>
+        把滑鼠放到起點來開始遊戲，將你的滑鼠從起點移動至終點
+    </p>
+    <div id="result"></div>
+    <div id="wholeMaze">
+        <div id="firstRow" class="wall"></div>
+
+
+
+        <div id="middle">
+            <div id="one" class="wall"></div>
+            <div id="two" class="wall"></div>
+            <div id="three" class="wall"></div>
+            <div id="four" class="wall"></div>
+            <div id="five" class="wall"></div>
+            <div id="six" class="wall"></div>
+            <div id="seven" class="wall"></div> 
+            <div id="start">起</div>
+            <div id="end">終</div>
+
+        </div>
+
+        <div id="lastRow" class="wall"></div>
+
+    </div>
+
+    <p class="info">你要做的就是將滑鼠從起點移動到終點，注意不要碰到牆壁
+    </p><br /><br />
+    <div id="block"></div>
+    <p class="info">Good luck!</p>
+    <style>
+        h1,p{
+    text-align: center;
+}
+
+#wholeMaze{
+    position: relative;
+    top: 12px;
+    height: 350px;
+    width: 750px;
+    margin: auto;
+}
+#result{
+    text-align: center;
+    font-size: 20px;
+    height: 20px;
+}
+#firstRow{
+    width: 100%;
+    height: 50px;
+    margin: 0;
+}
+.wall{
+    border: 1.2px solid black ;    
+    float: left;
+    background-color: #EEEEEE;
+}
+
+
+#middle{
+    margin: 0;
+    width: 120%;
+    height: 200px;
+}
+#one{
+    position: relative;
+    top: -1px;
+    width: 148px;
+    height: 148px;
+    margin-right: 0;
+    border-top: 1px solid #EEEEEE ;   
+}
+#two{
+    position: relative;
+    left: 50px;
+    width: 100px;
+    height: 145px;
+    top: 35px;
+    margin: 0;
+    border-bottom: 1px solid #000000 ;
+    border-top: 1px solid #000000 ;   
+    z-index:2;
+}
+#three{
+    position: relative;
+    left: 100px;
+    top: -1px;
+    width: 148px;
+    height: 90px;
+    border: 0 2px 1px 1px;
+    margin: 0;
+    border-top: 1px solid #eeeeee ;   
+}
+#four{
+    position: relative;
+    left: 150px;
+    width: 100px;
+    height: 140px;
+    top: 47px;
+    margin: 0;
+    border-bottom: 1px solid #eeeeee ;   
+    z-index:2;
+}
+#five{
+    position: relative;
+    left: 214px;
+    width: 30px;
+    height: 90px;
+    top: -2px;
+    margin: 0;
+    border-top: 1px solid #eeeeee ;   
+    z-index:2;
+}
+#six{
+    position: relative;
+    left: 181.5px;
+    width: 30px;
+    height: 60px;
+    top: 126px;
+    margin: 0;
+    border-bottom: 1px solid #eeeeee ;   
+    z-index:2;
+}
+#seven{
+    position: relative;
+    left: -218px;
+    top: 96px;
+    width: 148px;
+    height: 90px;
+    border: 0 2px 1px 1px;
+    margin: 0;
+    border-bottom: 1px solid #eeeeee ;
+    z-index:2;
+}
+#start{
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    left: -721px;
+    top: 152px;
+    border: 1px solid black;
+
+    background-color:#1af2d1;
+
+}
+#end{
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    left: -33px;
+    top: 92px;
+    background-color: #e8b80b;
+    border: solid black 1px;
+}
+#lastRow{
+    position: relative;
+    top: 37px;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    z-index: 1;
+}
+
+.info{
+    position: relative;
+    top: 20px;
+    text-align: left;
+    width: 600px;
+    margin: auto;
+}
+#block{
+    width: 100px;
+    height: 25px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+    </style>
+    <script>
+        var isStart = false;
+var isInMap = false;
+window.onload = function () {
+    var wall = document.getElementsByClassName("wall");
+    document.getElementById("start").addEventListener("mouseover", function () {
+        document.getElementById("result").textContent = "";
+        isStart = true;
+        isInMap = true;
+        for (var i = 0; i < wall.length; i++) { wall[i].style.backgroundColor = "#EEEEEE"; }
+
+    })
+
+    
+    document.getElementById("wholeMaze").addEventListener("mouseleave", function () {
+        isInMap = false;
+    });
+    for (var i = 0; i < wall.length; i++)
+        wall[i].addEventListener("mouseover", function (event) {
+            if (isStart) {
+                event.target.style.backgroundColor = "#FF0000";
+                document.getElementById("result").textContent = "碰到牆壁了，請把滑鼠放到起點來重新開始";
+                isStart = false;
+            }
+        });
+    for (var i = 0; i < wall.length; i++)
+        wall[i].addEventListener("mouseleave", function (event) {
+            event.target.style.backgroundColor = "#EEEEEE";
+        });  
+    document.getElementById("end").addEventListener("mouseover", function () {
+        if (isStart) {
+            if (isInMap) { document.getElementById("result").textContent = "恭喜!你完成了這個遊戲!"; }
+            else {
+                document.getElementById("result").textContent = "請遵守遊戲規則!";
+                isStart = false;
+            }
+        }
+        isStart = false;
+    });
+}
+    </script>
+
+    
+
+    
+ </body>
+</html>
