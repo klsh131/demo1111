@@ -1,0 +1,117 @@
+<html>
+
+<head>
+
+    <style>
+        h1 {
+        color: rgb(210, 131, 160);
+        margin-left: 2px;
+        font-style: italic;
+        font-size: 400%;
+        }
+
+        body {
+            background-color: rgb(151, 238, 238);
+        }
+
+        #jkpink1 {
+            background-color: #d8919b;
+        }
+
+        #jkpink2 {
+            background-color: #f7957d;
+        }
+
+        .jacky {
+            width: 100;
+            height: 40;
+            border: 2px solid #a76c6c;
+            border-radius: 1px;
+        }
+        .eggimg{
+            width: 430px;
+            height: 430px;
+            margin-right: 10px;
+        }
+    </style>
+
+    <script>
+        function showColor(cid) {
+            if (cid == 1) {
+                document.getElementById("iphonephoto").setAttribute("src", "安妮亞.png");
+                document.getElementById("iphonecolor").innerHTML = "<font color='#e9bfb6'>" + "間諜家家酒" + "</font>";
+            }
+        }
+
+        function change() {
+            let 扭蛋1 = "間諜.png";
+            let 扭蛋2 = "玩具總動員.png";
+            let 扭蛋3 = "恐龍.png";
+            let 扭蛋4 = "馬桶.png";
+            let 扭蛋5 = "鯊魚.png";
+            let 扭蛋6 = "蠟筆小新.png";
+            let 扭蛋7 = "艾摩石像.png";
+            let 扭蛋8 = "冰.png";
+            let 扭蛋9 = "猩猩.png";
+            let 扭蛋10 = "皮卡丘.png";
+            
+            let fragment3 = "";
+
+                z = Math.floor(Math.random() * 10) + 1;
+                if (z == 1) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋1 + "' />";
+                }
+                else if (z == 2) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋2 + "' />";
+                }
+                else if (z == 3) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋3 + "' />";
+                }
+                else if (z == 4) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋4 + "' />";
+                }
+                else if (z == 5) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋5 + "' />";
+                }
+                else if (z == 6) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋6 + "' />";
+                }
+                else if (z == 7) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋7 + "' />";
+                }
+                else if (z == 8) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋8 + "' />";
+                }
+                else if (z == 9) {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋9 + "' />";
+                }
+                else {
+                    fragment3 = fragment3 + "<img class='eggimg' src ='" + 扭蛋10 + "' />";
+                }
+
+                fragment3 = fragment3 + "<br>";
+
+
+            console.log(fragment3);
+            document.getElementById("display-3").innerHTML = fragment3;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <center>
+    <h1>今天想扭什麼蛋 / Capsule Toy</h1>
+    <h3 style="color:#c796a4;">此為隨機&一套式扭蛋出清中! 趕快來試試手氣吧!!!</h3>
+    <h6 style="color:#c796a4;">(說明:扭完一次200元才可點選再扭一次(監視錄影中)，點選"在投一次"只要150元!否則每次都要投200元。)</h6>
+    <div id="display-3"><img src="扭蛋.jpg" width="300"></div>
+
+    <br><input type="button" id="jkpink1" class="jacky" value="請投200元硬幣" onclick="javascript:{change();}"></input>
+    <input type="button" id="jkpink2" class="jacky" value="再扭一次" onclick="javascript:{change();}"></input></br>
+
+    </center>
+
+</body>
+
+</html>

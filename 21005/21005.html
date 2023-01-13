@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+        <title>Ex-1-1</title>
+        <style>
+        body {
+        background-color: rgba(59, 236, 233, 0.934);
+        }
+        
+        h1 {
+        color: rgb(210, 131, 160);
+        margin-left: 2px;
+        font-style: italic;
+        font-size: 400%;
+        }
+        
+        h5 {
+        color: rgb(224, 112, 112);
+        margin-left: 2px;
+        font-style: italic;
+        font-size: 100%;
+        }
+
+        
+        </style>
+    </head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>艾瑞克藝術館</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <style> 
+        #panel, #flip {
+            padding: 25px;
+            text-align: middle;
+            color: #FFC900;
+            background-color: #058affd3;
+            border-radius: 5px;  
+        }
+        #panel {
+            padding: 30px;
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    
+    <div id="flip">♡艾瑞克藝術館(´,,•ω•,,)♡--<點一下我看介紹></div>
+    <div id="panel">
+        先點選想了解的作家(點一下就好) 然後點選開始了解
+        <br>艾瑞克就會為你介紹喔～
+            有三種不同主題的介紹會隨機出現，記得多試試看喔!
+    </div>
+
+    <div class="buttonContainer">
+        <button class="button" onclick="health()" id="health">梵谷</button>
+        <button class="button" onclick="career()" id="career">達文西</button>
+        <button class="button" onclick="relationship()" id="relationship">米開朗基羅</button>
+    </div>
+
+   
+    <img src="https://media.istockphoto.com/id/949118068/zh/%E7%85%A7%E7%89%87/%E6%9B%B8.jpg?s=612x612&w=0&k=20&c=cB1qbiEP1qLnOnrC6byGjqbagRy-gbUv5OU5UtuKwmQ=" alt="health" class="magicBall" id="changingImg">
+
+    <script>
+        var img = document.getElementById("changingImg");
+        function health(){
+            img.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1NBqn_XNZclV10g4RKXafNtF6aOvkvS3_g&usqp=CAU'
+        }
+        function career(){
+            img.src='data:image/jpeg;base64,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'
+        }
+        function relationship(){
+            img.src='data:image/jpeg;base64,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'
+        }
+    </script>
+
+    <div class="result"></div>
+    <div class="sentence"></div>
+
+    <div class="buttonContainer">
+        <button class="button" id="start">開始了解</button>
+        <button class="button" id="restart">我要重新認識</button>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        destinyHealth = new Array(3);
+        destinyHealth[0] = "梵谷的生平";
+        destinyHealth[1] = "梵谷的畫作";
+        destinyHealth[2] = "梵谷的特色";
+
+        destinyHealthSentence = new Array(3);
+        destinyHealthSentence[0] = "1853年，出生於荷蘭的梵谷，其實在成為畫家之前，曾經做過不同的工作，好比被伯父帶進歐洲最大藝術品交易公司上班、憑藉著高度的宗教狂熱向採礦工人傳教等等。從27歲開始，梵谷全心投入藝術創作，到37歲舉槍自盡之間，這短短十年時光，梵谷的生活可說是窮困潦倒，雖然他的叔伯輩在歐洲經營畫店、在市場取得良好聲譽，但個性倔強的梵谷卻與他們相處不來，這也進而導致梵谷活著的時候未能靠著繪畫獲得財富，除了偶爾賣出幾張素描外，生前僅售出過一幅油畫，而弟弟西奧（Theodore Van Gogh），便成為他最重要的經濟支柱來源。";
+        destinyHealthSentence[1] = "<img src='https://im.marieclaire.com.tw/s805c452h100b0/aq/2017/05/31/201705101943095030.jpg'>";
+        destinyHealthSentence[2] = "造形與素材、光線與陰影、氣氛和遠近感，梵谷想把這些要素完全綜合的表現出來。這種思想使他總想畫出強烈的陽光，同時這種大膽的畫法，修正了印象派的單面性的描繪，給予後來的野獸派及表現主義很大的影響。";
+        
+        index = Math.floor(Math.random() * destinyHealth.length);
+        index = Math.floor(Math.random() * destinyHealthSentence.length);
+        
+        $('#health').on('click',function(e){
+            $('#start').on('click',function(e){
+                $('.result').append(destinyHealth[index]);
+                $('.sentence').append(destinyHealthSentence[index]);
+                $(this).remove();
+                $('#changingImg').remove();
+                $('#restart').show();
+            });
+            $('#restart').on('click',function(e){
+                location.reload(true);
+            });
+        });      
+    });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            destinyCareer = new Array(3);
+            destinyCareer[0] = "達文西的生平";
+            destinyCareer[1] = "達文西的畫作";
+            destinyCareer[2] = "達文西的特色";
+    
+            destinyCareerSentence = new Array(3);
+            destinyCareerSentence[0] = "達文西在 1452 年4 月15 日出生於意大利塔斯卡尼(Tuscany) 的文西城(Vinci) 。他是公證人比亞路(Messer Piero) 的私生子，母親卡泰蓮娜(Caterina)是一個平凡的農家女。 達文西在父親及繼母身邊渡過童年，14 歲那年他前往佛羅倫斯，拜當時最受人尊敬的畫師維羅基奧(Verrocchio) 為師，開始學習繪畫。1466 年至1476 年，達文西跟隨維羅基奧在他的畫室學藝， 與佩魯吉諾(Perugino) 和波提切利(Botticelli)等著名畫家一同工作。達文西在畫作《基督受洗》(Baptism of Christ) 向維羅基奧展現了他的高超技巧，畫中天使拿著耶穌的長袍，達文西用了一種新的油彩技巧，加強畫作的色彩濃度，令維羅基奧對這位小徒弟讚嘆不絕。《基督受洗》是達文西事業的轉捩點。1476 年以後，達文西展開他的求知之旅。他並不是當時典型的知識份子，沒有接受正式教育，又不懂拉丁文，亦不喜歡從書本裡學習。相反地，他會以觀察和親身經驗去了解周圍的事物，而這亦是他畢身堅信的理念。達文西孤獨終老，1519 年於法國Amboise帶著遺憾辭世。他最後寫道：「我冒犯了上帝和人類，因為我沒有做好我的工作。」";
+            destinyCareerSentence[1] = "<img src='https://d3d9mb8xdsbq52.cloudfront.net/181106/20181106182924165.jpg'>";
+            destinyCareerSentence[2] = "其特點是觀察入微，線條剛柔相濟，尤善於利用疏密程度不同的斜線，表現光影的微妙變化，他的每一件作品都以素描作基礎。 其藝術理論散見於他的5千多件筆記和未完稿的《畫論》中，也是文藝復興時代理論研究的重大成果。 達文西是義大利文藝復興時期著名的畫家，也是整個歐洲文藝復興時期最傑出的代表人物之一。";
+            
+            index = Math.floor(Math.random() * destinyCareer.length);
+            index = Math.floor(Math.random() * destinyCareerSentence.length);
+            
+            $('#career').on('click',function(e){
+                $('#start').on('click',function(e){
+                    $('.result').append(destinyCareer[index]);
+                    $('.sentence').append(destinyCareerSentence[index]);
+                    $(this).remove();
+                    $('#changingImg').remove();
+                    $('#restart').show();
+                });
+                $('#restart').on('click',function(e){
+                    location.reload(true);
+                });
+            });      
+        });
+        </script>
+
+    <script>
+        $(document).ready(function(){
+            destinyRelationship = new Array(3);
+            destinyRelationship[0] = "米開朗基羅的生平";
+            destinyRelationship[1] = "米開朗基羅的畫作";
+            destinyRelationship[2] = "米開朗基羅的特色";
+    
+            destinyRelationshipSentence = new Array(3);
+            destinyRelationshipSentence[0] = "1490年米開朗基羅進入羅綾索．麥第奇創辦的美術學校，得以出入其宮廷，受到最先進的人文主義思想的薰陶。 1494年，法軍入侵義大利，佛羅倫斯人趁機發動革命，推翻當時統治的麥第奇家族，並建立平民共和國，統治者為宗教改革家薩伏那羅拉，薩氏看出義大利在財富和衰敗的宗教信仰下日益墮落，便起而反抗。之前他便曾就麥第奇家族的享樂生活和教會的腐敗，發出措詞強烈的抨擊，並警告統治階級如不悔改，佛羅倫斯的命運將如新約啟示錄中的巴比倫和羅馬。他致力於道德革命，攻擊教宗，支持平民政府的建立與共和思想。1498年薩氏以蔑視教皇的名義被處死。1947年維多利亞過世。其後米開朗基羅雕了三座哀悼基督的像。他之所以繼續雕塑，已不是因為對藝術的信心，而是為了對基督的信心，而是因為他的利與精神不能不創造。他的最後一件雕塑「龍大尼尼的哀悼基督」，可看出他對藝術已到了漠不關心的地步。他不在像從前一樣注重人體美。雕像輪廓粗糙，看起來就像赤裸裸的靈魂。創作的對象不再是給世人看，而是給上帝。  ";
+            destinyRelationshipSentence[1] = "<img src='https://www.newton.com.tw/img/2/c6c/nBnauIWYzQ2NmhDMzIjN0QTYjJTZ4EmZ4gjYxYTMzQjYmJjYiZWN1QmNjNzLtVGdp9yYpB3LltWahJ2Lt92YuUHZpFmYuMmczdWbp9yL6MHc0RHa.jpg'>";
+            destinyRelationshipSentence[2] = "米開朗基羅脾氣暴躁，不合群，和達文西與拉斐爾都合不來，經常和他的恩主頂撞，但他一生追求藝術的完美，堅持自己的藝術思路。他於1564 年在羅馬去世，他的風格影響了幾乎三個世紀的藝術家。人們除了尊敬他外，別無其他形容詞，他的藝術造詣使他在史學地位上流傳數百年而不墜，他廣泛的被認為超越凡人而如神一般，用以說明非凡的成就。";
+            
+            index = Math.floor(Math.random() * destinyRelationship.length);
+            index = Math.floor(Math.random() * destinyRelationshipSentence.length);
+            
+            $('#relationship').on('click',function(e){
+                $('#start').on('click',function(e){
+                    $('.result').append(destinyRelationship[index]);
+                    $('.sentence').append(destinyRelationshipSentence[index]);
+                    $(this).remove();
+                    $('#changingImg').remove();
+                    $('#restart').show();
+                });
+                $('#restart').on('click',function(e){
+                    location.reload(true);
+                });
+            });      
+        });
+        </script>
+

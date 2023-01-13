@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>蛇麼東西</title>
+    <meta charset="UTF-8">
+    <style>
+    body { background-image: url("https://proxyimg.sucai999.com/preimg/6D28AC/700/6D28AC/101/f03a62b39cb2394a274ccfefaa9fe5f2.jpg?x-oss-process=image/format,webp"); }
+        h1 {
+            color: #0c4d8d;
+            margin-left: 40px;
+            font-size: 250%;
+        }
+        h2 {
+            color: #0080ff;
+            margin-left: 40px;
+            font-size: 200%;
+        }
+        h3 {
+            color: #2f0095;
+            margin-left: 40px;
+            font-size: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+            <a href="https://www.google.com/search?q=%E8%9B%87+&bih=641&biw=1478&hl=zh-TW&ei=4cyaY-POH6KWr7wPr4iP6Ak&ved=0ahUKEwijw_CFjfv7AhUiy4sBHS_EA50Q4dUDCA8&uact=5&oq=%E8%9B%87+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQsQMyBQguELEDMgUIABCABDIFCAAQsQMyBQgAELEDMgUIABCxAzIICAAQsQMQgwEyBQgAELEDMggIABCxAxCDATIICAAQsQMQgwE6CggAEEcQ1gQQsANKBAhBGABKBAhGGABQyAZY1QdgoAxoAXABeACAASyIAViSAQEymAEAoAEByAECwAEB&sclient=gws-wiz-serp">
+            <img src="snake.jpg" alt="" style="vertical-align:middle" width="150"></a>
+            <font size="7" color="#26204f"><b>蛇麼東西</b></font>
+
+        <hr><h1>臺灣蛇類快速辨別</h1>
+
+        <font size="3" color="#26204f"><b>遊戲方式:點擊正確的照片</br></br></b>
+
+        <h3>Question:<div id="wsn"></div></h3></br>
+
+        <input type="button" value="START" onclick="javascript:{start();}">
+        <input type="button" value="STOP" onclick="javascript:{stop();}"></br></br>
+
+        <table border="1">
+            <tr>
+            <td><div id="dsn1"><img src="snake.jpg" width="300"></div></td>
+            <td><div id="dsn2"><img src="snake.jpg" width="300"></div></td>
+            <td><div id="dsn3"><img src="snake.jpg" width="300"></div></td>
+            <td><div id="dsn4"><img src="snake.jpg" width="300"></div></td>
+            </tr>
+            </table>
+
+        <script>
+            var timer = setInterval();
+         
+            function change()
+            {
+                f2 = "";
+                snp = 
+                [
+                    ["Chinese cobra1.jpg","Chinese cobra2.jpg","Chinese cobra3.jpg","Chinese cobra4.jpg"],
+                    ["Chinese Green Tree Viper1.jpg","Chinese Green Tree Viper2.jpg","Chinese Green Tree Viper3.jpg","Chinese Green Tree Viper4.jpg"],
+                    ["Taiwan Habu1.jpg","Taiwan Habu2.jpg","Taiwan Habu3.jpg","Taiwan Habu4.jpg"],
+                    ["Chinese Sharp-nosed Viper1.jpg","Chinese Sharp-nosed Viper2.jpg","Chinese Sharp-nosed Viper3.jpg","Chinese Sharp-nosed Viper4.jpg"],
+                    ["Many-banded Krait1.jpg","Many-banded Krait2.jpg","Many-banded Krait3.jpg","Many-banded Krait4.jpg"],
+                    ["Yellow-lipped Sea Krait1.jpg","Yellow-lipped Sea Krait2.jpg","Yellow-lipped Sea Krait3.jpg","Yellow-lipped Sea Krait4.jpeg"],
+                    ["Formosa Wolf Snake1.jpg","Formosa Wolf Snake2.jpg","Formosa Wolf Snake3.jpg","Formosa Wolf Snake4.jpg"],
+                    ["Mock Viper1.jpg","Mock Viper2.jpg","Mock Viper3.jpg","Mock Viper4.jpg"],
+                    ["Taiwan Slug Snake1.jpg","Taiwan Slug Snake2.jpg","Taiwan Slug Snake3.jpg","Taiwan Slug Snake4.jpg"],
+                    ["Red-Banded Snake1.jpg","Red-Banded Snake2.jpg","Red-Banded Snake3.jpg","Red-Banded Snake4.jpg"],
+                    ["Cat Snake1.jpg","Cat Snake2.jpg","Cat Snake3.jpg","Cat Snake4.jpg"],
+                    ["Greater Green Snake1.jpg","Greater Green Snake2.jpg","Greater Green Snake3.jpg","Greater Green Snake4.jpg"]
+                ];
+
+
+                f1 = "";
+                word = ["Chinese cobra","Chinese Green Tree Viper","Taiwan Habu","Chinese Sharp-nosed Viper","Many-banded Krait","Yellow-lipped Sea Krait","Formosa Wolf Snake","Mock Viper","Taiwan Slug Snake","Red-Banded Snake","Cat Snake","Greater Green Snake"];
+
+                r1 = Math.floor(Math.random() * 12);
+                //-klsh131
+                r12 = Math.floor(Math.random() * 4);
+
+                f1 += word[r1];
+
+                document.getElementById("wsn").innerHTML = f1;
+
+
+
+                //r5:0-3，i:1-4 -klsh131
+                //r5 = Math.floor(Math.random() * 4);
+                r5 = Math.floor(Math.random() * 4)+1;
+
+                //-klsh131
+                //for(i=1,i<5,i++)
+                for(i=1;i<5;i++)
+                {
+                    if(i==r5)
+                    {
+                        //d1,2,3,4改dsn1,2,3,4 -klsh131
+                        //document.getElementById(i).innerHTML="<img src='" + snp[r1][r12] + "' width='300'  onclick='javascript:{hit(1," + r1 + ");}'>";
+                        di="dsn" + i;
+                        document.getElementById(di).innerHTML="<img src='" + snp[r1][r12] + "' width='300'  onclick='javascript:{hit(1," + r1 + ");}'>";
+                        //document.getElementById(di).innerHTML="Y"; 
+                    }
+                    else
+                    {
+                        r21 = Math.floor(Math.random() * 12);
+                        r22 = Math.floor(Math.random() * 4);
+                        di="dsn" + i;
+                        document.getElementById(di).innerHTML="<img src='" + snp[r21][r22] + "' width='300'  onclick='javascript:{hit(1," + r1 + ");}'>";
+                        //document.getElementById(di).innerHTML="N"; 
+
+                    }
+                //-klsh131
+                //};
+                }
+
+                //r11 = Math.floor(Math.random() * 12);
+                //r12 = Math.floor(Math.random() * 4);
+                //r21 = Math.floor(Math.random() * 12);
+                //r22 = Math.floor(Math.random() * 4);
+                //r31 = Math.floor(Math.random() * 12);
+                //r32 = Math.floor(Math.random() * 4);
+                //r41 = Math.floor(Math.random() * 12);
+                //r42 = Math.floor(Math.random() * 4);
+                
+                 //   document.getElementById("dsn1").innerHTML="<img src='" + snp[r11][r12] + "' width='300' ' onclick='javascript:{hit(1," + r1 + ");}'>";
+                 //   document.getElementById("dsn2").innerHTML="<img src='" + snp[r21][r22] + "' width='300' ' onclick='javascript:{hit(2," + r2 + ");}'>";
+                 //   document.getElementById("dsn3").innerHTML="<img src='" + snp[r31][r32] + "' width='300' ' onclick='javascript:{hit(3," + r3 + ");}'>";
+                 //   document.getElementById("dsn4").innerHTML="<img src='" + snp[r41][r42] + "' width='300' ' onclick='javascript:{hit(3," + r3 + ");}'>";
+   
+            }
+
+            //-klsh131
+            //d1改dsn1
+            function hit(d,r)
+            {
+                if (r==1)
+                {
+                    if (d==1)
+                    {
+                        document.getElementById("dsn1").innerHTML="<img src='" + images[2] + "'>";
+                    }
+                    else if (d==2)
+                    {
+                        document.getElementById("dsn2").innerHTML="<img src='" + images[2] + "'>";
+                    }
+                    else if (d==3)
+                    {
+                        document.getElementById("dsn3").innerHTML="<img src='" + images[2] + "'>";
+                    }
+                    score=score+1;
+                    //document.getElementById("s").innerHTML=score;
+                }
+            }
+
+            function start()
+            {
+                timer = setInterval("change()",1000);
+            }
+
+            function stop()
+            {
+                clearInterval(timer); 
+            }
+        </script>
+
+        <font size="5" color="#0080ff"><b><br>哪裡有綠色，哪裡就有生命</br></h2></font>
+        <font size="3" color="#26204f"><b>感謝 資訊來源:<a href="https://snakesoftaiwan.com/home_zh.html">Snakes of Taiwan</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://www.taiwan-snakes.tw/">臺灣蛇類快速辨別圖鑑</a></b></font>
+    </center>
+
+</body>
+</html>

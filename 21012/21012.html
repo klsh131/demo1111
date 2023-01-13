@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <font color="#3A006F"><h1 style="font-size: 3rem"  >INFINITE</h1></font>
+  <style>
+    #game {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      position: relative;
+    }
+    #snake {
+      width: 50px;
+      height: 50px;
+      background-color: #3A006F;
+      position: absolute;
+    }
+    #circle1 {
+      background-color : #84C0E9;
+      width : 30px;
+      height : 30px;
+      position : absolute;
+    }
+    #circle2 {
+      background-color : #EBD6E8;
+      width : 20px;
+      height : 20px;
+      position : absolute;
+    }
+    #circle3 {
+      background-color : #A9DFED;
+      width : 15px;
+      height : 15px;
+      position : absolute;
+    }
+  </style>
+</head>
+<body>
+  <p id="clock"></p>
+  <div id="game">
+  <div id="snake"></div>
+  <div id="circle1"></div>
+  <div id="circle2"></div>
+  <div id="circle3"></div>
+  </div>
+  <script>
+    const game = document.getElementById("game");
+    const snake = document.getElementById("snake");
+    const circle1 = document.getElementById("circle1");
+    const circle2 = document.getElementById("circle2");
+    const circle3 = document.getElementById("circle3");
+    let snakeX = 0;
+    let snakeY = 0;
+    let circle1Y = 0;
+    let circle2Y = 0;
+    let circle3Y = 0;
+    let circle1X = 25;
+    let circle2X = 105;
+    let circle3X = 403;
+
+
+    var timer=setInterval(circlefall,100);
+
+
+    function circlefall(){
+
+      let randomNumber1 = Math.floor(Math.random() * 450 + 1);
+      let randomNumber2 = Math.floor(Math.random() * 450 + 1);
+      let randomNumber3 = Math.floor(Math.random() * 450 + 1);
+
+      circle1Y = circle1Y+3;
+      circle2Y = circle2Y+5;
+      circle3Y = circle3Y+10;
+
+      circle1.style.top = circle1Y + "px";
+      circle2.style.top = circle2Y + "px";
+      circle3.style.top = circle3Y + "px";
+
+      circle1.style.left = circle1X + "px";
+      circle2.style.left = circle2X + "px";
+      circle3.style.left = circle3X + "px";
+
+      if (circle1Y > 450){
+        circle1Y=0;
+        circle1X = randomNumber1;
+      }
+      if (circle2Y > 460){
+        circle2Y=0;
+        circle2X = randomNumber2;
+      }
+      if (circle3Y > 475){
+        circle3Y=0;
+        circle3X = randomNumber3;
+      }
+    }
+    
+  function updateClock() {
+    var currentTime = new Date();
+    var currentHours = currentTime.getHours();
+    var currentMinutes = currentTime.getMinutes();
+    var currentSeconds = currentTime.getSeconds();
+
+    currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+    currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+    var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+    currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+    document.getElementById("clock").innerHTML = currentTimeString;
+  }
+
+  setInterval(updateClock, 1000);
+
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "ArrowUp") {
+        snakeY -= 10;
+      } else if (event.key === "ArrowDown") {
+        snakeY += 10;
+      } else if (event.key === "ArrowLeft") {
+        snakeX -= 10;
+      } else if (event.key === "ArrowRight") {
+        snakeX += 10;
+      }
+
+      if (snakeX < 0) {
+        snakeX = 0;
+      } else if (snakeX + 50 > 500) {
+        snakeX = 450;
+      }
+      if (snakeY < 0) {
+        snakeY = 0;
+      } else if (snakeY + 50 > 500) {
+        snakeY = 450;
+      }
+
+      snake.style.top = snakeY + "px";
+      snake.style.left = snakeX + "px";
+      
+    });
+    var count = 60;
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="zh-TW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://i1.wp.com/pic2.zhimg.com/50/0ab63c764a44035ffb4aeb4512fccbfd_hd.jpg" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- our CSS -->
+    <link rel="stylesheet" href="http://3.bp.blogspot.com/-yqAJCjeq6VI/VYqLa1AKZyI/AAAAAAAABKc/rCzGdjxQCV8/s1600/%25E5%25BD%2588%25E7%25A2%25B0%25E5%2585%25AC%25E5%25BC%258F.png">
+    <!-- google fonts -->
+    <link href="https://pic.baike.soso.com/ugc/baikepic2/6090/cut-20220105153348-15143695_jpg_526_350_18482.jpg/1284" rel="stylesheet">
+    <!-- animate CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script type="text/javascript">
+        var numArray = [碰撞公式，白努力定律，質能互換公式];
+        var answer = 回答;
+
+        function displayImage() {
+
+            var rand1 = numArray[Math.floor(Math.random() * numArray.length)];
+            var rand2 = numArray[Math.floor(Math.random() * numArray.length)];
+            var rand3 = numArray[Math.floor(Math.random() * numArray.length)];
+            answer = rand1 + rand2 + rand3;
+            document.canvas1.src = 'pic/number' + rand1.toString() + '.jpg';
+            document.canvas2.src = 'pic/number' + rand2.toString() + '.jpg';
+            document.canvas3.src = 'pic/number' + rand3.toString() + '.jpg';
+            setTimeout(makeTimeoutFunc('pic/init.png'), 10000);
+        }
+
+        function makeTimeoutFunc(param) {
+            return function() {
+                document.canvas1.src = param;
+                document.canvas2.src = param;
+                document.canvas3.src = param;
+            }
+        }
+
+        function checkAnswer() {
+            if ($('#answerSheet').val() != answer) {
+                alert('ahh.. answer is wrong. keep practicing!');
+            } else {
+                alert('Brilliant!');
+            }
+            $('#answerSheet').val(0);
+
+        }
+    </script>
+    </head>
+<h2>來檢視你對物理公式的熟悉度?</h2>
+<img src="https://media.istockphoto.com/id/1218011126/zh/%E5%90%91%E9%87%8F/%E7%89%A9%E7%90%86%E6%88%96%E6%95%99%E8%82%B2%E6%A6%82%E5%BF%B5%E8%A8%AD%E7%BD%AE%E5%9C%96%E7%A4%BA%E5%92%8C%E5%85%AC%E5%BC%8F%E5%8E%9F%E5%AD%90%E6%A0%B8%E5%AF%A6%E9%A9%97%E8%AD%9C%E5%AD%B8%E6%A0%A1%E8%80%83%E8%A9%A6%E6%88%96%E5%AF%A6%E9%A9%97%E5%AE%A4%E6%89%8B%E7%B9%AA%E5%A1%97%E9%B4%89%E7%AC%A6%E8%99%9F%E5%85%89%E8%AD%9C-%E7%A3%81%E6%80%A7-%E5%8A%9B%E5%AD%B8%E7%A7%91%E5%AD%B8%E8%83%8C%E6%99%AF%E6%88%96%E6%A9%AB%E5%B9%85.jpg?s=612x612&w=0&k=20&c=QtpkgVa9JCEwa7TcO9KjDUWOV7w7ZF_jZzOhdP91Dwg=" alt="W3Schools.com" width="1470" height="500">
+<h1>物理公式</h1>
+
+
+<section id="section2">
+    <section id="about" class="about">
+
+        <div class="jumbotron" style="text-align : center"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div id=all class="col-lg-10 col-lg-offset-1 text-left" style="text-align : center">
+
+                    <div class="row" style="text-align : center">
+
+                        <table border=1 align="center" width="1400" height="500">
+                            
+                            <tr>
+                                <th colspan="1">
+                                    <input onclick="displayImage();" type=button value="按我">
+                                </th>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center">
+                                    <img style='width: 1200px; height: 500px;' src="https://i.ytimg.com/vi/jjwVJeEj0rw/maxresdefault.jpg" name="canvas3" />
+                                </td>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="number" id="answerSheet" value="0">
+                                    <input onclick="checkAnswer();" type=button value="check" width="140" height="50">
+                                </td>
+                            </tr>
+                        </table>
+                        </form>
+
+
+                    </div>
+                </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

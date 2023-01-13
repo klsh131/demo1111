@@ -1,0 +1,205 @@
+<html>
+
+<head>
+
+<style>
+      body {
+            background-color: rgb(206, 238, 248);
+            text-align: center;
+            font-size: 100%;
+            font-family: "Times New Roman", Times, serif;
+        }
+#btpink{
+         background-color: #008a4c;
+}
+#btblue{
+         background-color: #000000;
+}
+#btblack{
+         background-color: #96bbe8;
+}
+#btwhite{
+         background-color: #b2b840;
+}
+#bt1{
+         background-color: #fb9c0e;
+}
+#bt2{
+         background-color: #691e5d;
+}
+#btred{
+         background-color: #C72232;
+}
+.bts{
+   width:50;
+   height:30;
+   border: 2px solid #000000;
+   border-radius: 50px;
+}
+</style>
+
+    <script>
+    function showColor(cid){
+    if (cid==1) 
+    {  
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0haOTPuRD-PmBpKRR73g1BN1N_PQ9aRS1jDR9vfzZHYFQWHytlBUlzVUUhZQcWEXk-AEx2AkooJVFMSnBiVUhz/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#008a4c'>" + "綠色愛心:一方面代表妒忌，一方面與有機和健康生活有關" + "</font>";
+    }
+    else if (cid==2)  
+    {
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0hVOXKfVDcCWBlMiN70hZ2N19kCg9WXhpjAQRYfzpcV1QaBBxlCVJEVUlnBVhLAU4-DFdBAkQ7ElFAUUdiWVNE/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#000000'>" + "黑色愛心:與紅色愛心emoji的意思相反，代表痛苦和悲傷；另外有些網民會使用黑色愛心emoji去表達自己的「黑色幽默」" + "</font>";
+    }
+    else if (cid==3) 
+    {
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0hJxyYmAtJFVdEID9M8wJqAH52Fjh3TAZUIBZESBtOS2M7FgBSKEBeYmghHG48GFIJLUVdNWkpDmZhQ1tVeEFe/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#96bbe8'>" + "藍色愛心:象徵信任、和諧、和平及忠誠" + "</font>";
+    }
+    else if (cid==4)  
+    {
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0hDEpbr-e5G2pNGzFx-jhkPXdNGAV-dwhpKS1KdRJ1RV4yLQ5vIXtRX2EcRApmIlw0JH5TCGEbAFtoeFVocXpR/w644");
+    document.getElementById("iphonecolor").innerHTML="<font color='#b2b840'>" + "黃色愛心:是快樂和友誼的象徵。另外在社交媒體Snapchat上，對話框旁的黃色愛心emoji代表你跟對方傳訊得最多" + "</font>";
+    }
+    else if (cid==5)  
+    {
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0hHIoP2zgVF2ZSKT195QtoMWh_FAlhRQRlNh9GeQ1HSVItHwJjPklcU35-GVMrTlA4O0xfBH8uDFd3Sllkbkhc/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#fb9c0e'>" + "橘色愛心:可能只是代表一種「半心半意」的愛，如果對方使用這個emoji的話，可能只想跟你做朋友" + "</font>";
+    }
+    else if (cid==6)  
+    {
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0h1TcTS7fobnteLURg6Q8RLGR7bRRtQX14Ohs_ZAFDME8hG3t-Mk0lTnIkORwjSSklN0gmGnssdUp7TiB5Ykwl/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#691e5d'>" + "紫色愛心:一方面是當社交媒體用戶分享化妝和服裝等有關事情時會使用到的顏色符號，一方面是用作表達富有同情心的愛和關懷" + "</font>";
+    }
+    else 
+    {  
+    document.getElementById("iphonephoto").setAttribute("src","https://obs.line-scdn.net/0hw7zT292rKBhHLQID8AxXT317K3d0QTsbIxt5BxhDdiw4Gz0dK01gLWt4JS1uSW9GLkhgeWIoMyliTmYae0xg/w1200");
+    document.getElementById("iphonecolor").innerHTML="<font color='#C72232'>" + "紅色愛心:代表真愛，傳統和經典的愛情" + "</font>";
+    }
+    }
+    </script>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--self-defined css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <!--jquery slide down or up-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+                });
+            });
+        </script>
+    <style> 
+        #panel, #flip {
+            padding: 25px;
+            text-align: middle;
+            color: #000000;
+            border-radius: 5px;  
+        }
+        #panel {
+            padding: 30px;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<center>
+
+<h1 style="color:#ff0000;">Nick之愛心占卜測驗(੭ु´ ᐜ `)੭ु⁾⁾</h1><br>
+
+<div id="iphonecolor">請選擇你最愛甚麼顏色 我會告訴你knock顏色的愛心代表什麼(原子少年超好看)</div>
+
+<img id="iphonephoto" src="https://media.zenfs.com/en/nownews.com/0badd990c9d262495946c6b43f19fb9b" width="400"><br>
+
+<div id="iphonecolor">請選擇你最愛甚麼顏色 </div>
+
+<input type="button" id="btpink" class="bts" onclick="javascript:{showColor(1);}"></input>
+<input type="button" id="btblue" class="bts" onclick="javascript:{showColor(2);}"></input>
+<input type="button" id="btblack" class="bts" onclick="javascript:{showColor(3);}"></input>
+<input type="button" id="btwhite" class="bts" onclick="javascript:{showColor(4);}"></input>
+<input type="button" id="bt1" class="bts" onclick="javascript:{showColor(5);}"></input>
+<input type="button" id="bt2" class="bts" onclick="javascript:{showColor(6);}"></input>
+<input type="button" id="btred" class="bts" onclick="javascript:{showColor(7);}"></input>
+
+<br></br><br></br><br></br><br></br><br></br>
+
+<div id="flip">♡占卜館♡</div>
+<div id="panel">
+    既然已經到每個顏色愛心的意思
+    <br>那就讓Nick為你占卜今日運勢喔～
+</div>
+
+
+
+<!--main img-->
+<img src="https://imgur.dcard.tw/a4D9LXBh.jpg" alt="health" class="magicBall" id="changingImg">
+
+
+<!--result show-->
+<div class="result"></div>
+<div class="sentence"></div>
+
+<!--start & restart button-->
+<div class="buttonContainer">
+    <button class="button" onclick="health()" id="health">你的命運</button>
+    <button class="button" id="restart">我要重算</button>
+</div>
+
+    <!--javascript onclick change img-->
+    <script>
+        var img = document.getElementById("changingImg");
+        function health(){
+            img.src='https://obs.line-scdn.net/0hw7zT292rKBhHLQID8AxXT317K3d0QTsbIxt5BxhDdiw4Gz0dK01gLWt4JS1uSW9GLkhgeWIoMyliTmYae0xg/w1200'
+        }
+
+    </script>
+
+    <!--result show-->
+    <div class="result"></div>
+    <div class="sentence"></div>
+
+    <!--random result for health-->
+    <script>
+    $(document).ready(function(){
+        destinyHealth = new Array(1);
+        destinyHealth[0] = "src","'https://obs.line-scdn.net/0hw7zT292rKBhHLQID8AxXT317K3d0QTsbIxt5BxhDdiw4Gz0dK01gLWt4JS1uSW9GLkhgeWIoMyliTmYae0xg/w1200'";
+
+        destinyHealthSentence = new Array(1);
+        destinyHealthSentence[0] = "<img src='https://obs.line-scdn.net/0hw7zT292rKBhHLQID8AxXT317K3d0QTsbIxt5BxhDdiw4Gz0dK01gLWt4JS1uSW9GLkhgeWIoMyliTmYae0xg/w1200'>";
+
+        
+        index = Math.floor(Math.random() * destinyHealth.length);//js亂數程式
+        index = Math.floor(Math.random() * destinyHealthSentence.length);//js亂數程式
+        
+        $('#health').on('click',function(e){
+            $('#start').on('click',function(e){
+                $('.result').append(destinyHealth[index]);
+                $('.sentence').append(destinyHealthSentence[index]);
+                $(this).remove();
+                $('#changingImg').remove();
+                $('#restart').show();
+            });
+            $('#restart').on('click',function(e){
+                location.reload(true);//刷新網頁
+            });
+        });      
+    });
+    </script>
+
+
+    
+
+</center>
+</body>
+
+</html>

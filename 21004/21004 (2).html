@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />不知道要吃哪家早餐店?
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script>
+        var b1=0;
+        var b2=0;
+        var b3=0;
+        
+        function change()
+        {
+         
+        
+          r = Math.floor(Math.random() * 9) + 1;
+        
+        
+          if (r==1)
+          {
+            document.getElementById("d1").innerHTML="永和豆漿";
+          } 
+          else if (r==2)
+          {
+            document.getElementById("d2").innerHTML="呷尚寶";
+          }
+          else if (r==3)
+          {
+            document.getElementById("d3").innerHTML="早安美芝城";
+            }
+          else if (r==4)
+          {
+            document.getElementById("d4").innerHTML="麥味登";
+          }
+          else if (r==5)
+          {
+            document.getElementById("d5").innerHTML="富特士多";
+          }
+          else if (r==6)
+          {
+            document.getElementById("d6").innerHTML="脆皮鮮奶甜甜圈";
+          }
+          else if (r==7)
+          {
+            document.getElementById("d7").innerHTML="EGG BUN Breakfast Sandwich & Espresso";
+          }
+          else if (r==8)
+          {
+            document.getElementById("d8").innerHTML="阜杭豆漿";
+          }
+          else(r==9)
+          {
+            document.getElementById("d9").innerHTML="ISAAC早餐店";
+          }
+        
+        }
+        </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <span class="avatar"><img src="images/gordon.jpeg" alt="" /></span>
+            <h1> <a href="./project/project.html">就讓我為選擇障礙的朋友們決定吧！</a></h1>
+
+        </header>
+        <div id="d1"><抽籤></div>
+        <input type="button" value="CHANGE" onclick="javascript:{change();}">
+        <!-- Main -->
+        <section id="main">
+
+            <!-- Thumbnails -->
+            <section class="thumbnails">
+                <div>
+                    <a href="images/thumbs/永和豆漿.jpg">
+                        <img src="images/thumbs/永和豆漿.jpg" alt="" />
+                        <h3>永和豆漿</h3>
+                    </a>
+
+                    <a href="images/thumbs/呷尚寶.jpg">
+                        <img src="images/thumbs/呷尚寶.jpg" alt="" />
+                        <h3>呷尚寶</h3>
+                    </a>
+                    <a href="images/thumbs/麥味登.jpeg">
+                        <img src="images/thumbs/麥味登.jpeg" alt="" />
+                        <h3>麥味登</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/thumbs/富特士多.jpg">
+                        <img src="images/thumbs/富特士多.jpg" alt="" />
+                        <h3>富特士多</h3>
+                    </a>
+                    <a href="images/thumbs/脆皮鮮奶甜甜圈.jpg">
+                        <img src="images/thumbs/脆皮鮮奶甜甜圈.jpg" alt="" />
+                        <h3>脆皮鮮奶甜甜圈</h3>
+                    </a>
+
+                    <a href="images/thumbs/早安美芝城.jpg">
+                        <img src="images/thumbs/早安美芝城.jpg" alt="" />
+                        <h3>早安美芝城</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/thumbs/EGG BUN Breakfast Sandwich & Espresso.jpeg">
+                        <img src="images/thumbs/EGG BUN Breakfast Sandwich & Espresso.jpeg" alt="" />
+                        <h3>EGG BUN Breakfast Sandwich & Espresso</h3>
+                    </a>
+                    <a href="images/thumbs/阜杭豆漿.jpg">
+                        <img src="images/thumbs/阜杭豆漿.jpg" alt="" />
+                        <h3>阜杭豆漿</h3>
+                    </a>
+                    <a href="images/thumbs/ISAAC早餐店.jpg">
+                        <img src="images/thumbs/ISAAC早餐店.jpg" alt="" />
+                        <h3>ISAAC早餐店</h3>
+                    </a>
+                </div>
+            </section>
+
+        </section>
+
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
