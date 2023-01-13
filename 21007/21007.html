@@ -1,0 +1,53 @@
+<html>
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title> 歡迎來物出道理 </title>
+</head>
+
+<body style="
+background-image: url(https://photo.16pic.com/00/40/24/16pic_4024096_b.jpg);
+background-size: cover;
+">
+
+
+    <div class="container" style="background: rgb(204, 224, 58);opacity: .8;">
+        <div>
+            <h1>物理公式</h1>
+        </div>
+        <div>
+            <h2>遊戲規則</h2>
+            <h4>1,每一次出一題物理公式，總共10題。</h4>
+            <h4>2,只要寫出選出正確答案就得一分，共10分。</h4>
+            <h4>3,得分越高越厲害</h4>
+
+        </div>
+        <a href="%E7%89%A9%E7%90%86%E6%88%91%E4%BE%86%E4%BA%86.html">
+            <button type="button" class="btn btn-primary btn-lg btn-block">
+            開始遊戲
+        </button>
+        </a>
+
+    </div>
+<script type="text/javascript">
+function comp()
+{
+var w,n,cnt;
+
+    n=parseFloat(document.getElementById("inp").n.value);
+    cnt=0;
+    document.getElementById("ans").innerHTML="";
+    while (cnt<n)
+    {
+        document.getElementById("ans").innerHTML=document.getElementById("ans").innerHTML+"第"+(cnt+1)+"題 "+"<br/>\n";
+       cnt=cnt+1;
+    }
+}
+</script>
+</head>
+
+</html>
